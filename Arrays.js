@@ -29,7 +29,8 @@ console.log(typeof newArr);
 
 //Slice and Splice methods: 
 console.log("Array before slice:", myArr);
-console.log("SLICE Operation:", myArr.slice(1,3)) // Slice method does not include the last range (eg: 1 to 2 and 3 is not included) and also does not alter original array
+console.log("SLICE Operation:", myArr.slice(1,3)) /* Slice method does not include the last range (eg: 1 to 2 and 3 is not included) 
+                                                     and also does not alter original array */
 console.log("Array after slice:", myArr);
 
 
@@ -73,4 +74,5 @@ let score2 = 200
 let score3 = 300
 
 console.log("Add all values into an Array using OF operation:", Array.of(score1, score2, score3));
+
 
