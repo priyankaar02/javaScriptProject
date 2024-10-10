@@ -27,15 +27,15 @@ function loginUserMessage(username){
 //console.log(loginUserMessage())
 
 /* ---------------REST Operator(...) ----------------*/
- function calculateCartPrice(...num1) {
+ function calculateCartPrice(...num1) {  /*when you do not know how many arguments are coming from backend*/
     return num1;
  }
- //console.log(calculateCartPrice(100,200,300));
+ //console.log(calculateCartPrice(100,200,300)); /* Output: Converts to an array => [100,200,300] */
 
  function calculateCartPrice2(val1, val2,...num2){
     return num2;
  }
- //console.log(calculateCartPrice2(100,200,300,1000));
+ //console.log(calculateCartPrice2(100,200,300,1000)); 
 
  /*-------Passing Objects to functions as parameter --------------*/
 
