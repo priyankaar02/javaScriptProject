@@ -1,0 +1,110 @@
+<!--.....................................DOM LEARNING.................................................-->
+
+<!--Added two extension for an HTML file to display: 1. live server 2. html preview-->
+<!DOCTYPE html> <!-- Specifies that is type html 5 -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Learning</title>
+    <style>
+        .bg-black {
+            background-color: #212121;
+            color: antiquewhite;
+        }
+    </style>
+</head>
+<body class="bg-black">
+    <div >
+        <h1 id="title" class="heading">DOM learning!! <span style="display: none;">Test text</span></h1>
+        <h1>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Provident accusamus dicta dolo</h1>
+        <h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque laudantium ratione totam sint autem</p>
+        <input type="password" name="password" id="paswd">Enter Password
+        
+        <!-- keyboard Shortcut to add lists ul>li*4 -->
+        <ul>
+            <li class="list-item"></li>
+            <li class="list-item"></li>
+            <li class="list-item"></li>
+            <li class="list-item"></li>
+        </ul>
+    </div>
+
+</body>
+</html>
+
+<!-- SOME IMPORTANT DOM JAVASCRIPT CODE-->
+<!--
+
+document.getElementById('title').id ==> title
+document.getElementById('title').className ==> heading
+
+document.getElementById('title').getAttribute('id') ==> title
+document.getElementById('title').getAttribute('class') ==> heading
+document.getElementById('title').setAttribute('class','test') ==> overwrites class "heading" to class "test"
+document.getElementById('title').setAttribute('class','test', 'heading') ==> addes class "test" and also restains class "heading"
+
+
+const title = document.getElementById('title')
+title ==> <h1 id="title" class="heading">DOM learning!! 
+            <span style="display: none;">Test text</span>
+        </h1> 
+title.style.backgroundColor = 'green'
+title.style.padding = "15px"
+title.style.borderRadius = "20px"
+title.textContent ==> DOM learning!! Test text
+title.innerText ==> DOM learning!!
+title.innerHTML ==> DOM learning!! <span style="display: none;">Test text</span>
+
+document.getElementsByClassName('heading') ==>returns HTMLCollection
+
+document.querySelector('h2') ==> <h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit</h2>
+document.querySelector('#title') ==> <h1 id="title" class="heading">DOM learning!! <span style="display: none;">Test text</span></h1>
+document.querySelector('.heading') ==> <h1 id="title" class="heading">DOM learning!! <span style="display: none;">Test text</span></h1>
+document.querySelector('input[type= "password"]') ==> <input type="password" name="password" id="paswd">Enter Password
+
+
+document.querySelector('ul') ==> <ul>...</ul>
+const myUl = document.querySelector('ul')
+myUl.querySelector('li') ==> <li>...</li>
+const turnGreen = myUl.querySelector('li')
+turnGreen.style.backgroundColor = "green"
+turnGreen.style.padding = "10px"
+turnGreen.innerText = "five"
+
+document.querySelectorAll('li') ==> NodeList(4) [li,li,li,li]
+const tempLiList = document.querySelectorAll('li')
+tempLiList ==> NodeList(3) [li,li,li]
+tempLiList.style.color = 'green'  ==> Gives an error saying Cannot set Properties of undefined
+tempLiList[0].style.color = 'green'
+
+const myH1 = document.querySelectorAll('h1')
+myH1 ==> NodeList [h1#title.heading]
+myH1.style.color = 'green' ==> Cannot set properties of undefined
+myH1[0].style.color = 'green'
+
+const tempLiList = document.querySelectorAll('li')
+tempLiList ==> NodeList(4) [li,li,li,li]
+tempLiList.forEach(function(li) {
+    l.style.backgroungColor = 'blue'
+})
+
+const tempClassList = document.getElementsByClassName('list-item')
+tempClassList ==> HTMLCollection(4) [li.list-item, li.list-item, li.list-item, li.list-item]
+tempClassList.forEach(function(l) {
+}) ===> tempClassList.forEachis not a function
+
+----------Must need to convert 'HTMLCollection' to an 'array' first---------------------------
+Array.from(tempClassList) => (4) [li.list-item, li.list-item, li.list-item, li.list-item]
+
+const myConvertedArray = Array.from(tempClassList)
+myConvertedArray ==> (4) [li.list-item, li.list-item, li.list-item, li.list-item]
+myCOnvertedArray.forEach(function(l) {
+        l.style.color = 'blue'
+        l.innerText = 'DOM Learning'
+        l.style.backgroundColor = 'white'
+        l.style.padding = '10px'
+})
+
+-->

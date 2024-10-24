@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Learning 4</title>
+</head>
+<body style = "background-color: #212121; color: #fff;" >
+    <ul class="language">
+        <li>Javascript</li>
+    </ul>
+</body>
+<script>
+
+    //This function is not so optimised using "innerHTML" because every time you call appendChild function, it must traverse the entire tree and append your item
+    function addLanguage(langName) {
+        const li = document.createElement('li')
+        li.innerHTML = `${langName}`
+        document.querySelector('.language').appendChild(li)
+    }
+    addLanguage("Python")
+    addLanguage("React")
+
+    //Optimized Method
+    function addOptiLanuage(langName) {
+        const li = document.createElement('li')
+        const addText = document.createTextNode(langName)
+        li.appendChild(addText)
+        document.querySelector('.language').appendChild(li)
+    }
+
+    addOptiLanuage('Golang')
+
+//---------------EDIT a single list value ----------------------------
+    //const selectLanguage = document.querySelector('li:first-child')
+    const selectLanguage = document.querySelector('li:nth-child(2)')
+    //const selectLanguage = document.querySelector('li:last-child')
+
+    //Method 1
+    //selectLanguage.innerHTML = "Typescript" 
+
+    //Method 2
+    const newLi = document.createElement('li')
+    newLi.textContent = "Typescript"
+    //selectLanguage.replaceWith(newLi)
+
+    //Method 3
+    selectLanguage.outerHTML = '<li>Rails</li>'
+
+//---------------REMOVE a single list value ----------------------------
+    const removeLanguage = document.querySelector('li:last-child')
+    removeLanguage.remove()
+
+
+</script>
+</html>

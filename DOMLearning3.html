@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Learning 3</title>
+    <style>
+        .page-display {
+            background-color: #212121;
+            color: #bab6b6
+        }
+    </style>
+</head>
+<body>
+    
+</body>
+<script>
+    // Adding a div into body through JS
+   const div = document.createElement('div')
+   div.className = "main"
+   div.id = Math.round(Math.random() * 10 + 1)
+   div.setAttribute("title", "generated title")
+   div.style.backgroundColor = "green"
+   div.style.padding = "10px"
+   
+   //Method 1
+   //div.innerHTML = "Adding text into a div through JS" 
+   //document.body.appendChild(div)
+    
+   //Method 2
+   const addText = document.createTextNode("Adding text into a div through JS")
+   div.appendChild(addText)
+   document.body.appendChild(div)
+   
+</script>
+</html>
