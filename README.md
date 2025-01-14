@@ -129,4 +129,5 @@ Unlike null, the value of an undefined variable is set by JavaScript as undefine
 
 console.log(typeof undefined); //undefined.... As discussed above, the type of undefined is undefined itself. So basically, it is a data type.
 
-
+**Datatypes Storage- Heap and Stack memory**
+![ScreenShot Tool -20250114150142](https://github.com/user-attachments/assets/dbf192da-5990-431f-a0f9-a7e100c07d5e)
