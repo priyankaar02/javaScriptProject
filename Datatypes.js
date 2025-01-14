@@ -1,8 +1,23 @@
 /********************************* DATATYPES *****************************/
 
-//Primitive datatypes => 7 types: Boolean, Number, String, null, undefined, symbol, BigInt
+/* PRIMITIVE DATATYPES => 7 types: Boolean, Number, String, null, undefined, symbol, BigInt
+String uses call by value */
 
-// Non-primitive datatypes (Refernce) => array, object, Funtions
+/*NOTE: JavaScript is a dynamically typed language. In dynamically typed languages all type checks are performed in a runtime, only when your program is executing. */
+
+let score = 100;
+let scoreValue = 100.3;
+let isLoggedIn = false;
+let outsideTemp = null;
+let userEmail;
+let id = Symbol('123');
+let anotherId = Symbol('123');
+
+console.log(id === anotherId); //false
+
+const bigNumber = 2345674331178934332n;
+
+// NON-PRIMITIVE DATATYPES (Reference) => array, object, Functions
 
 const arrEx = ["a", "b", "c"];
 let myObj = {
@@ -11,7 +26,6 @@ let myObj = {
 }
 const myFunction = function(){
     console.log("hello world");
-    
 }
 
 console.log(typeof arrEx);
@@ -26,8 +40,8 @@ let nameOne = "stackmemory";
 
 let anotherName = nameOne;
 anotherName = "Copystackmemory";
-console.log(nameOne);
-console.log(anotherName);
+console.log(nameOne); //stackmemory
+console.log(anotherName); //Copystackmemory
 
 /* Example for Heap memory: Both variables (userOne and userTwo) reference the same object and any changes done is done 
 to the original object */
@@ -50,7 +64,7 @@ const age = 18
 /*String interpolation using Backticks(``) */
 console.log(`My name is ${name} and my age is ${age}`);
 
-//String functions
+//****************String Operations*****************
 
 const cityName = new String("Munich-Bavaria")
 
