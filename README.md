@@ -66,3 +66,67 @@ Just like let, const declarations are hoisted to the top but are not initialized
 4. While var and let can be declared without being initialized, const must be initialized during declaration.
 
 Reference Link: https://www.freecodecamp.org/news/var-let-and-const-whats-the-difference/
+
+**What is Strict Mode in JavaScript?**
+Strict mode is a feature in JavaScript that was introduced in ECMAScript 5. It lets you write code in such a way that follows stricter rules.
+
+When strict mode is enabled, the JavaScript engine enforces additional constraints. This means you may be able to catch some common errors that would have otherwise gone unnoticed. It also helps you write cleaner and more secure code.
+
+What is Strict Mode in JavaScript?
+Strict mode is a feature in JavaScript that was introduced in ECMAScript 5. It lets you write code in such a way that follows stricter rules.
+
+When strict mode is enabled, the JavaScript engine enforces additional constraints. This means you may be able to catch some common errors that would have otherwise gone unnoticed. It also helps you write cleaner and more secure code.
+
+**How to Use Strict Mode in JavaScript**
+You can use JavaScript strict mode in two ways. You can either enable strict mode for an entire JavaScript file, or you can enable it within the scope of a function.
+
+To enable strict mode for the whole JavaScript file, you simply add the string "use strict" to the top of your code.
+You can use JavaScript strict mode in two ways. You can either enable strict mode for an entire JavaScript file, or you can enable it within the scope of a function.
+
+To enable strict mode for the whole JavaScript file, you simply add the string "use strict" to the top of your code.
+
+![ScreenShot Tool -20250114112323](https://github.com/user-attachments/assets/5bcf37a7-8526-4af0-8f0e-0a3912ff5a9a)
+
+For functions, you can enable strict mode by placing the "use strict" string at the top of your function body.
+![ScreenShot Tool -20250114112354 (1)](https://github.com/user-attachments/assets/513591da-4ca8-49e6-95b2-c278def68ca6)
+
+You must place the "use strict" string at the top of the file or function body. Otherwise, it will not work.
+
+**Difference Between Strict Mode and Regular JavaScript**
+1. Using an Undeclared Variable: Regular JS throws no error when the variable is used without being declared. And strict mode does not allow the use of variables before they are declared.
+2. Duplicating a Parameter Name: In non-strict mode, duplicating a parameter name in a function is allowed. Strict mode requires each parameter to have a unique name.
+3. Using Reserved Future Keywords: In JavaScript, there are some keywords reserved for potential future use. And using these keywords as identifiers (such as variables or function names) may likely cause issues in future. When you're not using strict mode, you can use it to name variables and functions. Strict mode doesn't allow the use of these reserved keywords. This ensures compatibility with future versions of JavaScript.
+4. Use of Deprecated Features: Strict mode restricts the use of JavaScript's deprecated features like arguments.caller, arguments.callee, and so on. These are disallowed due to security and performance concerns. But non-strict mode allows using them.
+5. Assignment to a Read-Only Property: In non-strict mode, when you attempt to assign a new value to a read-only property, the assignment will not modify the property's value. But it will not throw any error. Instead, the assignment silently fails, and the property retains its original value. In strict mode, however, attempting to update the value of the property will result in a TypeError. This stricter enforcement helps catch potential errors early.
+
+**JavaScript Features that Use Strict Mode by Default**
+Some JavaScript features do not require you to explicitly invoke "use strict". By default, strict mode is applied to prevent common errors and ensure compatibility with future JavaScript versions.
+
+Examples of such contexts include the following:
+1. ES6 classes
+2. ES6 modules
+3. Arrow functions
+4. Tagged template literals
+
+**Datatypes: Null and undefined**
+Null in JavaScript means an empty value and is also a primitive type in JavaScript. The variable which has been assigned as null contains no value. Undefined, on the other hand, means the variable has been declared, but its value has not been assigned.
+
+**What is Null?**
+We have heard the word "null" many times in English. Its literal meaning is having no value. The same meaning is analogous to the meaning of null in programming.
+
+Null is basically an assignment value given to a variable. The variable which has been assigned as null contains no value.
+
+When we assign null as a value to any variable, it means that it is empty or blank. It is to show that the variable has no value. Also, **null is an object in JavaScript**. When it gets assigned to a variable, it represents no value. The setting of the value must be done manually by the user as JavaScript never sets the value as null. **An object can be emptied by setting it to null.**
+
+console.log(typeof null); // object .... As discussed above, the type of null is an object.
+
+**What is Undefined?**
+There is a subtle difference between null and undefined, but as a programmer, it is important that we understand it clearly.
+
+As the name suggests, undefined means "not defined". So we declare a variable but do not assign a value to it, the variable becomes undefined.
+
+Unlike null, the value of an undefined variable is set by JavaScript as undefined. The variable gets created at the run-time. When we do not pass an argument for a function parameter, the default value is taken as undefined. Besides, when a function doesn't return a value, it returns undefined.
+
+console.log(typeof undefined); //undefined.... As discussed above, the type of undefined is undefined itself. So basically, it is a data type.
+
+
