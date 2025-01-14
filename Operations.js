@@ -38,3 +38,17 @@ let gameCounter1 = 100;
 ++gameCounter1++;
 console.log(gameCounter); //100
 
+//---------------------------COMPARISONS ------------------------------------
+
+console.log("2" > 1); //true
+console.log("02" > 1); //true
+ 
+/* Comparisons convert sometimes null to a number, treating it as 0 and sometimes as NaN. Hence, null >= 0 is true and null > 0 is false */
+console.log(null > 0); //false
+console.log(null == 0); //false
+console.log(null >= 0); //true
+
+console.log(null > 0); //false
+console.log(null == 0); //false
+console.log(null >= 0); //false
+
