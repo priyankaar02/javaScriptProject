@@ -72,20 +72,21 @@ console.log(cityName[0]);
 console.log(cityName.__proto__);
 console.log("Length:", cityName.length);
 console.log("CharAt:", cityName.charAt(3));
+console.log("Index of:", cityName.indexOf('u'));
 console.log("To Uppercase:", cityName.toUpperCase());
-console.log("Substing:", cityName.substring(0,4));
-console.log("Slice:", cityName.slice(0,3));
-console.log("Split:", cityName.split('-'));
+console.log("Substing:", cityName.substring(0,4)); //Muni ----- Cannot give negative values here
+console.log("Slice:", cityName.slice(0,3)); // Mun ---- Can give negative values
+console.log("Split:", cityName.split('-')); //split(seperator,limit)
 
-const userThree = "extra%20characterremoval";
+const userThree = "https://replace.com/extra%20characterremoval";
 console.log("Replace:", userThree.replace('%20','-'));
-console.log("Includes:", userThree.includes('removal'));
+console.log("Includes:", userThree.includes('removal')); //false
 
 const userFour = "    Removeextraspaces    ";
 console.log("Before Trim:", userFour);
 console.log("After Trim:", userFour.trim());
 
-/********** NUMBER AND MATH **********************/
+/************************** NUMBER AND MATH *****************************/
 
 const score = 400
 console.log(score);
@@ -94,13 +95,13 @@ const balance = new Number(100)
 console.log(balance);
 
 console.log(balance.toString().length);
-console.log(balance.toFixed(2));
+console.log(balance.toFixed(2)); // 
 
 const otherNumber = 123.8966;
-console.log(otherNumber.toPrecision(3));
+console.log(otherNumber.toPrecision(3)); //123
 
 const hundreds = 1000000
-console.log(hundreds.toLocaleString('en-IN'));
+console.log(hundreds.toLocaleString('en-IN')); //10,00,000
 
 console.log(Math);
 console.log(Math.abs(-4));
