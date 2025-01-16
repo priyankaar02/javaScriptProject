@@ -41,7 +41,7 @@ let valueInNumber5 = Number(score5);
 console.log(typeof valueInNumber5); // number
 console.log(valueInNumber5); //1
 
-let score = "John";
+let score6 = "John";
 let valueInNumber6 = Number(score6);
 console.log(typeof valueInNumber6); // number
 console.log(valueInNumber6); //1
